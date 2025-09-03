@@ -10,3 +10,4 @@ SafoneAPI
 nekos.py
 telegraph
 uuid
+git+https://github.com/SEX-SUX/TheApi@main
