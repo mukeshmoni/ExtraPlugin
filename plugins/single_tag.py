@@ -338,7 +338,7 @@ async def cancel_spam(client, message):
         return await message.reply("♦ 𝐒𝐭𝐨𝐩𝐩𝐞𝐝..♦")
 
 
-__MODULE__ = "🌙 𝐓𖽖ɢ𖽖𖾘𖾘 🫧"
+__MODULE__ = "Sɪɴɢʟᴇ Tᴀɢ"
 __HELP__ = """
 **Tᴀɢ A Usᴇʀs Oɴᴇ Bʏ Oɴᴇ**
 
