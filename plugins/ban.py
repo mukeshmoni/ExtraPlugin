@@ -30,7 +30,7 @@ from config import BANNED_USERS
 
 warnsdb = mongodb.warns
 
-__MODULE__ = "🌙 𝐁𖽖𖽡 🫧"
+__MODULE__ = "Bᴀɴ"
 __HELP__ = """
 /ban - Ban A User
 /banall - Ban All Users
