@@ -1,5 +1,5 @@
 from pyrogram import enums, filters
-from VIPMUSIC import app
+from MOONMUSIC import app
 
 BOT_ID = app.id
 
