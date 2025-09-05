@@ -29,7 +29,7 @@ async def bots(client, message):
         await asyncio.sleep(e.value)
 
 
-__MODULE__ = "🌙 𝐁𖽙𖾓𖾗 🫧"
+__MODULE__ = " Bᴏᴛs "
 __HELP__ = """
 **ʙᴏᴛs**
 
