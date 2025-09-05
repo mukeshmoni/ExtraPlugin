@@ -28,7 +28,7 @@ BUTTON = InlineKeyboardMarkup(
     [
         [
             InlineKeyboardButton(
-                "🌙 𝐊𖽹𖽴𖽡𖽖𖽳 𝐌𖽞 🫧",
+                "๏ ᴋɪᴅɴᴀᴘ ᴍᴇ ๏",
                 url=f"https://t.me/MoonXmusics_bot?startgroup=s&admin=delete_messages+manage_video_chats+pin_messages+invite_users",
             )
         ]
