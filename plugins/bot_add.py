@@ -47,7 +47,7 @@ async def join_watcher(_, message):
                         [
                             [
                                 InlineKeyboardButton(
-                                    f"🌙 𝐀𖽴𖽴𖽞𖽴 𝐁ʏ 🫧",
+                                    f"ᴀᴅᴅᴇᴅ ʙʏ ",
                                     url=f"tg://openmessage?user_id={message.from_user.id}",
                                 )
                             ]
