@@ -25,6 +25,49 @@ from MOONMUSIC.utils.database import (
     set_loop,
 )
 from MOONMUSIC.core.call import VIP
+"""
+from pyrogram import filters
+from MOONMUSIC import app
+from MOONMUSIC.utils.database import get_assistant
+import asyncio
+
+async def continuous_check():
+    monitored_chat_id = config.LOG_GROUP_ID  # Replace with your target group chat ID
+    prev_members = set()
+
+    while True:
+        userbot = await get_assistant(config.LOG_GROUP_ID)
+        current_members = set()
+
+        async for m in userbot.get_call_members(monitored_chat_id):
+            if not m.is_left:
+                current_members.add(m.user.id)
+
+        new_joiners = current_members - prev_members
+        leavers = prev_members - current_members
+
+        for user_id in new_joiners:
+            user = await app.get_users(user_id)
+            await app.send_message(monitored_chat_id, f"{user.mention} has joined the voice chat.")
+
+        for user_id in leavers:
+            user = await app.get_users(user_id)
+            await app.send_message(monitored_chat_id, f"{user.mention} has left the voice chat.")
+
+        prev_members = current_members
+        await asyncio.sleep(1)
+
+asyncio.create_task(continuous_check())
+
+
+"""
+
+
+
+
+
+
+
 
 
 @app.on_message(
@@ -91,7 +134,7 @@ from MOONMUSIC import app
 
 @app.on_message(filters.video_chat_members_invited)
 async def brah3(app: app, message: Message):
-    text = f"➻ {message.from_user.mention}\n\n**𝑉𝑐 𝑉𝑎 𝑃𝑎𝑛𝑔𝑢𝑢𝑢 🫀🫂💙**\n\n**🌙 **"
+    text = f"➻ {message.from_user.mention}\n\n**๏ 𝑉𝑐 𝑉𝑎 𝑃𝑎𝑛𝑔𝑢𝑢𝑢 🫀🫂💙 :**\n\n**➻ **"
     x = 0
     for user in message.video_chat_members_invited.users:
         try:
@@ -104,7 +147,7 @@ async def brah3(app: app, message: Message):
         add_link = f"https://t.me/{app.username}?startgroup=true"
         reply_text = f"{text} 🤭🤭"
         userbot = await get_assistant(message.chat.id)
-        await message.reply(reply_text, reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="🐣 𝑉𝑐 𝐿𝑎 𝐽𝑜𝑖𝑛 𝐴𝑔𝑢𝑑𝑎 𝑆𝑖𝑙𝑢𝑘𝑢 ", url=add_link)]]))
+        await message.reply(reply_text, reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="🐣 𝑉𝑐 𝐿𝑎 𝐽𝑜𝑖𝑛 𝐴𝑔𝑢𝑑𝑎 𝑆𝑖𝑙𝑢𝑘𝑢", url=add_link)]]))
         
     except Exception as e:
         print(f"Error: {e}")
