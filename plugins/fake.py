@@ -46,7 +46,7 @@ async def fkadress(_, message):
         await message.reply_text("ᴏᴏᴘs ɴᴏᴛ ғᴏᴜɴᴅ ᴀɴʏ ᴀᴅᴅʀᴇss.\nᴛʀʏ ᴀɢᴀɪɴ")
 
 
-__MODULE__ = "🌙 𝐅𖽖ᴋ𖾝 🫧"
+__MODULE__ = "Fᴀᴋᴇ"
 __HELP__ = """
 
 /fake [ᴄᴏᴜɴᴛʀʏ ɴᴀᴍᴇ ] - ᴛᴏ ɢᴇᴛ ʀᴀɴᴅᴏᴍ ᴀᴅᴅʀᴇss"""
