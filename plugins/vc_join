@@ -4,7 +4,7 @@ from pytgcalls import PyTgCalls
 from pytgcalls.types import Update, UserJoined, UserLeft
 from pytgcalls.types.enums import UpdateType
 from MOONMUSIC.core.mongo import mongodb  # MongoDB connection
-from MONIMUSIC import app
+from MOONMUSIC import app
 
 # Function to check if monitoring is enabled for a group
 def is_monitoring_enabled(chat_id):

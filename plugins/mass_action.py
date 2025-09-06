@@ -6,7 +6,7 @@ import asyncio
 from MOONMUSIC.misc import SUDOERS
 from pyrogram import Client, filters, enums
 from pyrogram.types import Message
-from VIPMUSIC.utils.database import get_assistant
+from MOONMUSIC.utils.database import get_assistant
 from pyrogram.errors import UserAlreadyParticipant, UserNotParticipant, ChatAdminRequired
 from pyrogram.types import Message, ChatPrivileges
 import asyncio

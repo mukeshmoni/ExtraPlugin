@@ -15,20 +15,20 @@ from os import getenv
 load_dotenv()
 
 from dotenv import load_dotenv
-from VIPMUSIC import app
+from MOONMUSIC import app
 from utils.error import capture_err
 from utils.permissions import adminsOnly, member_permissions
 BOT_TOKEN = getenv("BOT_TOKEN", "")
 MONGO_DB_URI = getenv("MONGO_DB_URI", "")
 STRING_SESSION = getenv("STRING_SESSION", "")
-from VIPMUSIC.utils.keyboard import ikb
+from MOONMUSIC.utils.keyboard import ikb
 from .notes import extract_urls
-from VIPMUSIC.utils.functions import (
+from MOONMUSIC.utils.functions import (
     check_format,
     extract_text_and_keyb,
     get_data_and_name,
 )
-from VIPMUSIC.utils.database import (
+from MOONMUSIC.utils.database import (
     deleteall_filters,
     get_filter,
     get_filters_names,
