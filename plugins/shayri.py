@@ -88,7 +88,7 @@ async def help(client: Client, message: Message):
     )
 
 
-__MODULE__ = "🌙 𝐔𝑟𝑢𝑡𝑡𝑢 🫧"
+__MODULE__ = " 𝐔𝑟𝑢𝑡𝑡𝑢 "
 __HELP__ = """
 /uruttu, /pickup : Gᴇᴛ ᴀ ʀᴀɴᴅᴏᴍ .
 
