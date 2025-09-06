@@ -58,7 +58,7 @@ async def help(client: Client, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        "✨ 𝚂𝚄𝙿𝙿𝙾𝚁𝚃 ✨", url=f"https://t.me/TMK_MUSICSUPPORT"
+                        "✨ 𝚂𝚄𝙿𝙿𝙾𝚁𝚃 ✨", url=f"https://t.me/Celestialangelss"
                     ),
                     InlineKeyboardButton(
                         "✨ 𝙾𝙵𝙵𝙸𝙲𝙴𝚁 ✨", url=f"https://t.me/KingofAtttitude"
@@ -77,7 +77,7 @@ async def help(client: Client, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        "✨ 𝚂𝚄𝙿𝙿𝙾𝚁𝚃 ✨", url=f"https://t.me/TMK_MUSICSUPPORT"
+                        "✨ 𝚂𝚄𝙿𝙿𝙾𝚁𝚃 ✨", url=f"https://t.me/Celestialangelss"
                     ),
                     InlineKeyboardButton(
                          "✨ 𝙾𝙵𝙵𝙸𝙲𝙴𝚁 ✨", url=f"https://t.me/KingofAtttitude"
@@ -88,11 +88,11 @@ async def help(client: Client, message: Message):
     )
 
 
-__MODULE__ = "🌙 𝐔𖽷𖽪𖾓𖾓𖽪 🫧"
+__MODULE__ = "🌙 𝐔𝑟𝑢𝑡𝑡𝑢 🫧"
 __HELP__ = """
-/uruttu, /pickup : Gᴇᴛ ᴀ ʀᴀɴᴅᴏᴍ Sʜᴀʏᴀʀɪ.
+/uruttu, /pickup : Gᴇᴛ ᴀ ʀᴀɴᴅᴏᴍ .
 
-Tʜɪs ᴄᴏᴍᴍᴀɴᴅ ᴡᴏʀᴋs ɪɴ ʙᴏᴛʜ ᴘʀɪᴠᴀᴛᴇ ᴀɴᴅ ɢʀᴏᴜᴘ ᴄʜᴀᴛs. Iᴛ ᴘʀᴏᴠɪᴅᴇs ᴀ ʀᴀɴᴅᴏᴍ ᴘɪᴇᴄᴇ ᴏғ Sʜᴀʏᴀʀɪ ғʀᴏᴍ ᴀ ᴘʀᴇᴅᴇғɪɴᴇᴅ ɪsᴛ. Tʜᴇ ʀᴇᴘʏ ɪɴᴄᴜᴅᴇs ʙᴜᴛᴛᴏɴs ғᴏʀ sᴜᴘᴘᴏʀᴛ ᴀɴᴅ ᴏғғɪᴄɪᴀ ᴄʜᴀɴɴᴇs.
+Tʜɪs ᴄᴏᴍᴍᴀɴᴅ ᴡᴏʀᴋs ɪɴ ʙᴏᴛʜ ᴘʀɪᴠᴀᴛᴇ ᴀɴᴅ ɢʀᴏᴜᴘ ᴄʜᴀᴛs. Iᴛ ᴘʀᴏᴠɪᴅᴇs ᴀ ʀᴀɴᴅᴏᴍ ᴘɪᴇᴄᴇ ᴏғ  ғʀᴏᴍ ᴀ ᴘʀᴇᴅᴇғɪɴᴇᴅ ɪsᴛ. Tʜᴇ ʀᴇᴘʏ ɪɴᴄᴜᴅᴇs ʙᴜᴛᴛᴏɴs ғᴏʀ sᴜᴘᴘᴏʀᴛ ᴀɴᴅ ᴏғғɪᴄɪᴀ ᴄʜᴀɴɴᴇs.
 
 Fᴇᴀᴛᴜʀᴇs:
 - Pʀᴏᴠɪᴅᴇs ᴀ ʀᴀɴᴅᴏᴍ uruttu ᴏɴ ᴄᴏᴍᴍᴀɴᴅ.
