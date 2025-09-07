@@ -76,7 +76,11 @@ async def member_has_left(client: app, member: ChatMemberUpdated):
         else:
             welcome_photo = random.choice(random_photo)
 
-        caption = f"**#New_Member_Left**\n\n**๏** {user.mention} **ʜᴀs ʟᴇғᴛ ᴛʜɪs ɢʀᴏᴜᴘ**\n**๏ sᴇᴇ ʏᴏᴜ sᴏᴏɴ ᴀɢᴀɪɴ..!**"
+        caption = (
+            f"**#Member_Left**\n\n"
+            f"**๏** [{user.first_name}](tg://user?id={user.id}) **ʜᴀs ʟᴇғᴛ ᴛʜɪs ɢʀᴏᴜᴘ**\n"
+            f"**๏ sᴇᴇ ʏᴏᴜ sᴏᴏɴ ᴀɢᴀɪɴ..!**"
+        )
         button_text = "๏ ᴠɪᴇᴡ ᴜsᴇʀ ๏"
 
         message = await client.send_photo(
@@ -84,7 +88,7 @@ async def member_has_left(client: app, member: ChatMemberUpdated):
             photo=welcome_photo,
             caption=caption,
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(button_text, user_id=user.id)]]
+                [[InlineKeyboardButton(button_text, url=f"tg://user?id={user.id}")]]
             ),
         )
 
@@ -92,5 +96,4 @@ async def member_has_left(client: app, member: ChatMemberUpdated):
             await asyncio.sleep(30)
             await message.delete()
 
-        # Run the task
         asyncio.create_task(delete_message())
