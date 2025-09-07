@@ -98,7 +98,7 @@ async def add_warn(chat_id: int, name: str, warn: dict):
     warns[name] = warn
 
     await warnsdb.update_one(
-        {"chat_id": chat_id}, {"$set": {"warns": warns}}, upsert=True
+        {"chat_id": chat_id}, {"$set": {"warns": warns}}, upsert=True,
     )
 
 
@@ -147,13 +147,14 @@ async def kickFunc(_, message: Message):
     await message.reply_text(msg)
     await asyncio.sleep(1)
     await message.chat.unban_member(user_id)
-    if message.command[0][0] == "s":
-        await message.reply_to_message.delete()
+    # FIX: Check for command presence before subscripting
+    if message.command and message.command[0] and message.command[0][0] == "s":
+        if message.reply_to_message:
+            await message.reply_to_message.delete()
         await app.delete_user_history(message.chat.id, user_id)
 
 
 # Ban members
-
 
 @app.on_message(
     filters.command(["ban", "sban", "tban"]) & ~filters.private & ~BANNED_USERS
@@ -191,10 +192,12 @@ async def banFunc(_, message: Message):
         f"**Banned User:** {mention}\n"
         f"**Banned By:** {message.from_user.mention if message.from_user else 'Anon'}\n"
     )
-    if message.command[0][0] == "s":
-        await message.reply_to_message.delete()
+    # FIX: Check for command presence before subscripting
+    if message.command and message.command[0] and message.command[0][0] == "s":
+        if message.reply_to_message:
+            await message.reply_to_message.delete()
         await app.delete_user_history(message.chat.id, user_id)
-    if message.command[0] == "tban":
+    if message.command and message.command[0] == "tban":
         split = reason.split(None, 1)
         time_value = split[0]
         temp_reason = split[1] if len(split) > 1 else ""
@@ -219,6 +222,7 @@ async def banFunc(_, message: Message):
     if replied_message:
         message = replied_message
     await message.reply_text(msg)
+
 
 
 # Unban members
