@@ -4,7 +4,6 @@ from pyrogram import filters
 from pyrogram.enums import ChatAction
 from MOONMUSIC import app
 
-
 @app.on_message(filters.command(["gemini"]))
 async def gemini_handler(client, message):
     await app.send_chat_action(message.chat.id, ChatAction.TYPING)
@@ -25,15 +24,19 @@ async def gemini_handler(client, message):
     try:
         response = api.gemini(user_input)
         await app.send_chat_action(message.chat.id, ChatAction.TYPING)
-        x = response["results"]
-        if x:
-            await message.reply_text(x, quote=True)
+        # Fix: Null check and key existence check
+        if response and "results" in response:
+            x = response["results"]
+            if x:
+                await message.reply_text(x, quote=True)
+            else:
+                await message.reply_text("sᴏʀʀʏ sɪʀ! ᴘʟᴇᴀsᴇ Tʀʏ ᴀɢᴀɪɴ")
         else:
             await message.reply_text("sᴏʀʀʏ sɪʀ! ᴘʟᴇᴀsᴇ Tʀʏ ᴀɢᴀɪɴ")
     except requests.exceptions.RequestException as e:
-        pass
-
-
+        await message.reply_text(f"API error: {e}")
+    except Exception as e:
+        await message.reply_text(f"Unexpected error: {e}")
 
 @app.on_message(filters.group, group=50)
 async def chatbot_handler(client, message):
@@ -50,10 +53,16 @@ async def chatbot_handler(client, message):
                 Bas reply hi likh ke do, kuch extra nahi aur jitna fast ho sake utna fast reply do!
                 """
             response = api.gemini(user_input)
-            x = response["results"]
-            if x:
-                await message.reply_text(x, quote=True)
+            # Fix: Null check and key existence check
+            if response and "results" in response:
+                x = response["results"]
+                if x:
+                    await message.reply_text(x, quote=True)
+                else:
+                    await message.reply_text("sᴏʀʀʏ sɪʀ! ᴘʟᴇᴀsᴇ Tʀʏ ᴀɢᴀɪɴ")
             else:
                 await message.reply_text("sᴏʀʀʏ sɪʀ! ᴘʟᴇᴀsᴇ Tʀʏ ᴀɢᴀɪɴ")
         except requests.exceptions.RequestException as e:
-            pass
+            await message.reply_text(f"API error: {e}")
+        except Exception as e:
+            await message.reply_text(f"Unexpected error: {e}")
