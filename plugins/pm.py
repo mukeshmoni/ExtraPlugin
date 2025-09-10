@@ -4,18 +4,22 @@ import random
 from MOONMUSIC import app
 
 
-@app.on_message(filters.command(["m","m","m","m"], prefixes=["p","d","P","D"]))
-def goodnight_command_handler(_, message):
+@app.on_message(filters.command(["m", "m", "m", "m"], prefixes=["p", "d", "P", "D"]))
+async def goodnight_command_handler(_, message):
     sender = message.from_user.mention
     send_sticker = random.choice([True, False])
     if send_sticker:
         sticker_id = get_random_sticker()
-        app.send_sticker(message.chat.id, sticker_id)
-        message.reply_text(f"**𝐊ᴀʀᴜᴍᴀ 𝐈ᴠᴀɴ 𝐈ʀᴜᴋᴀ  𝐆ʀᴘ 𝐕ᴀɴᴛʜᴀʟᴇʏʏ 𝐏ᴍ  𝐊ᴜᴘᴅʀᴀ  😐😒</b>\n\n<b> {sender}</b>\n\n<b>𝐀ᴅᴍɪɴ 𝐓ʜᴀ 𝐒ᴏʟʟɪ 𝐁ᴀɴ 𝐏ᴀɴɴɪʀᴜᴠᴇᴀ 𝐎ᴅᴜᴅᴀᴀᴀ 𝐓ʜᴀʀᴋᴜʀɪɪɪ....🤨😏🤧**")
+        await app.send_sticker(message.chat.id, sticker_id)
+        await message.reply_text(
+            f"**𝐊ᴀʀᴜᴍᴀ 𝐈ᴠᴀɴ 𝐈ʀᴜᴋᴀ  𝐆ʀᴘ 𝐕ᴀɴᴛʜᴀʟᴇʏʏ 𝐏ᴍ  𝐊ᴜᴘᴅʀᴀ  😐😒</b>\n\n<b> {sender}</b>\n\n<b>𝐀ᴅᴍɪɴ 𝐓ʜᴀ 𝐒ᴏʟʟɪ 𝐁ᴀɴ 𝐏ᴀɴɴɪʀᴜᴠᴇᴀ 𝐎ᴅᴜᴅᴀᴀᴀ 𝐓ʜᴀʀᴋᴜʀɪɪɪ....🤨😏🤧**"
+        )
     else:
         emoji = get_random_emoji()
-        app.send_message(message.chat.id, emoji)
-        message.reply_text(f"**𝐊ᴀʀᴜᴍᴀ 𝐈ᴠᴀɴ 𝐈ʀᴜᴋᴀ  𝐆ʀᴘ 𝐕ᴀɴᴛʜᴀʟᴇʏʏ 𝐏ᴍ  𝐊ᴜᴘᴅʀᴀ  😐😒</b>\n\n<b> {sender}</b>\n\n<b>𝐀ᴅᴍɪɴ 𝐓ʜᴀ 𝐒ᴏʟʟɪ 𝐁ᴀɴ 𝐏ᴀɴɴɪʀᴜᴠᴇᴀ 𝐎ᴅᴜᴅᴀᴀᴀ 𝐓ʜᴀʀᴋᴜʀɪɪɪ....🤨😏🤧</b>\n\n<b>{emoji}**")
+        await app.send_message(message.chat.id, emoji)
+        await message.reply_text(
+            f"**𝐊ᴀʀᴜᴍᴀ 𝐈ᴠᴀɴ 𝐈ʀᴜᴋᴀ  𝐆ʀᴘ 𝐕ᴀɴᴛʜᴀʟᴇʏʏ 𝐏ᴍ  𝐊ᴜᴘᴅʀᴀ  😐😒</b>\n\n<b> {sender}</b>\n\n<b>𝐀ᴅᴍɪɴ 𝐓ʜᴀ 𝐒ᴏʟʟɪ 𝐁ᴀɴ 𝐏ᴀɴɴɪʀᴜᴠᴇᴀ 𝐎ᴅᴜᴅᴀᴀᴀ 𝐓ʜᴀʀᴋᴜʀɪɪɪ....🤨😏🤧</b>\n\n<b>{emoji}**"
+        )
 
 
 def get_random_sticker():
